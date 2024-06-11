@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="ff"></h1>
+    <div id="data"></div>
+    <script>
+        axios.getOneUser('/user',{
+            "lastname": "Zikriyoev",
+            "name": "Furik"
+        })
+        .then((reponse)=>{
+            console.log(reponse);
+        }, (error   )=>{
+            console.log(error)
+        })
+        // fetch('/')
+        // .then(reponse => reponse.json())
+        // .then(data => {
+        //     const dataContainer = document.getElementById('data');
+        //     dataContainer.innerHTML = JSON.stringify(data, null, 2  );
+        // })
+        // .catch(error => console.error('Ошибка', error))
+
+    </script>
+    
+</body>
+</html>
